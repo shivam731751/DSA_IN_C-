@@ -1,0 +1,29 @@
+#include <iostream> 
+using namespace std;
+void selection(int arr[], int num) {
+    //  try it selfe  same code one day later 
+
+    for(int i=0; i<=num-2; i++ ){
+        int mini = i;
+        for(int j=i; j<=num-1; j++){
+            if(arr[j] < arr[mini]){
+                mini =j;
+            }
+        }
+        swap(arr[i],arr[mini]);
+    }
+
+}
+
+int main() {
+int n; 
+cin >> n;
+int arr[n];
+for(int i=0; i<n; i++) cin >> arr[i];
+selection(arr,n);
+for(int i=0; i<n;i++){
+    cout << arr[i] << " ";
+}
+return 0;
+
+}
